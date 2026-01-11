@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MexiCultura</title>
+  <link rel="icon" href="Imagenes/Logo.png">
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <!--menu-->
+    <div class="menu container">
+      <div>
+        <br>
+        <img style="float:left;" src="Imagenes/Logo2.png" width="190" height="75" />
+      </div>
+      <input type="checkbox" id="menu" />
+      <label for="menu">
+        <img src="Imagenes/menu.png" class="menu-icono" alt="menu">
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="RepublicaMexicana.html">Mapa</a></li>
+
+        </ul>
+      </nav>
+    </div>
+    </div>
+
+
+    </center>
+  </header>
+  <br><br>
+  <center>
+    <h2>Estados de la República Mexicana</h2>
+  </center>
+  <div class="popular-content">
+    <div class="carousel">
+      <a href="EstadosPages/Aguascalientes.html">
+        <img src="Imagenes/MapaAgs.png" alt="" style="width: 300px; height: auto;">
+      </a>
+      <a href="EstadosPages/Tlaxcala.html">
+        <img src="Imagenes/MapaTlax.png" alt="" style="width: 300px; height: auto;">
+      </a>
+      <a href="EstadosPages/Morelos.html">
+        <img src="Imagenes/MapaMor.png" alt="" style="width: 300px; height: auto;">
+      </a>
+      <a href="EstadosPages/CiudadDeMexico.html">
+        <img src="Imagenes/MapaCDMX.png" alt="" style="width: 180px; height: auto;">
+      </a>
+    </div>
+    <button class="carousel-button prev">&lt;</button>
+    <button class="carousel-button next">&gt;</button>
+  </div>
+
+  <main class=" actividad-container">
+    <br><br>
+    <center>
+      <h2>MiniJuegos, ¡Pon a Prueba tu Conocimiento!</h2>
+    </center>
+
+    <div class="actividad-content" align="center">
+      <div class="actividad-1">
+        <img src="Imagenes/juego1.jpg" alt="">
+        <div class=actividad-txt>
+          <h3>Ahorcado</h3>
+          <div class="descrip">
+            <p>Intenta adivinar la palabra antes de que se complete el dibujo del ahorcado.</p>
+            <a href="games/Ahorcado1.html" class=btn-2>Jugar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="actividad-1">
+        <img src="Imagenes/Pasapalabra.png" alt="">
+        <div class="actividad-txt">
+          <h3>Pasapalabra</h3>
+          <div class="descrip">
+            <p>Adivina y completa las palabras que encajen con la descripción.</p>
+            <a href="games/Pasapalabra.html" class=btn-2>Jugar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <section class="contact container">
+    <form>
+      <input type="email" placeholder="Escribe tu correo">
+      <input type="password" placeholder="Contraseña">
+      <input type="submit" class="btn-3" value="Acceder">
+    </form>
+  </section>
+
+  <div class="footer-container">
+    <div class="footer container">
+      <!-- Contenido del pie de página -->
+      <div class="link">&nbsp;
+        <a href="#" class="logo">MexiCultura</a>
+      </div>
+      <div class="link">
+        <ul>
+
+          <li style="font-size: 40px;"><a href="#">Inicio</a></li>
+          <li style="font-size: 40px;"><a href="RepublicaMexicana.html">Mapa</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector(".carousel");
+      const prevButton = document.querySelector(".carousel-button.prev");
+      const nextButton = document.querySelector(".carousel-button.next");
+      let offset = 0;
+
+      nextButton.addEventListener("click", () => {
+        if (offset > -(carousel.scrollWidth - carousel.clientWidth)) {
+          offset -= 310;
+          carousel.style.transform = `translateX(${offset}px)`;
+        }
+      });
+
+      prevButton.addEventListener("click", () => {
+        if (offset < 0) {
+          offset += 100;
+          carousel.style.transform = `translateX(${offset}px)`;
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
