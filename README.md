@@ -38,10 +38,6 @@
 
 ---
 
-## Tecnologías Utilizadas  
-- HTML
-- CSS3
-- JS
 
 ## Requisitos del Sistema
 - Navegador moderno (Chrome, Firefox, Edge)
